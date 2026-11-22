@@ -114,7 +114,8 @@ class Stupid < Formula
     virtualenv_install_with_resources
     (bin/"stupid").write <<~EOS
       #!/bin/bash
-      exec "#{libexec}/bin/python" -m stupid "$@"
+      export PYTHONPATH="#{libexec}/lib/python3.14/site-packages/src${PYTHONPATH:+:$PYTHONPATH}"
+      exec "#{libexec}/bin/python" -m main "$@"
     EOS
   end
 
