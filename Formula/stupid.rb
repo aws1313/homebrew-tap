@@ -1,8 +1,11 @@
 class Stupid < Formula
   include Language::Python::Virtualenv
 
-  url "file:///Users/runner/work/stupid/stupid/stupid/dist/stupid-0.0.19.tar.gz"
-  sha256 "$FILESUM"
+  url "https://git.aws1313.de/api/packages/aws1313/generic/stupid/0.0.20/stupid-0.0.20.tar.gz"
+  sha256 "bea91af6fb57a527283b41a565024a3efbe1957ae7f834c30ff3462eceea5288"
+  desc "a CLI and tray client for certain features of stud.ip"
+  homepage "https://github.com/LennikGamez/stupid"
+  license "GPL-3.0"
 
   depends_on "python@3.14"
 
