@@ -112,6 +112,10 @@ class Stupid < Formula
 
   def install
     virtualenv_install_with_resources
+    (bin/"stupid").write <<~EOS
+      #!/bin/bash
+      exec "#{libexec}/bin/python" -m stupid "$@"
+    EOS
   end
 
   test do
