@@ -1,8 +1,8 @@
 class Stupid < Formula
   include Language::Python::Virtualenv
 
-  url "https://git.aws1313.de/api/packages/aws1313/generic/stupid/0.0.20/stupid-0.0.20.tar.gz"
-  sha256 "bea91af6fb57a527283b41a565024a3efbe1957ae7f834c30ff3462eceea5288"
+  url "https://git.aws1313.de/api/packages/aws1313/generic/stupid/0.0.21/stupid-0.0.21.tar.gz"
+  sha256 "cee9c3b046d402c96a9e80ab65ef047eccf937090840b6cc38f63c64857868b9"
   desc "a CLI and tray client for certain features of stud.ip"
   homepage "https://github.com/LennikGamez/stupid"
   license "GPL-3.0"
@@ -78,7 +78,6 @@ class Stupid < Formula
     url "https://files.pythonhosted.org/packages/71/18/0b0d99f5bf164f04a7a9534c3dbdbe4d5fd2b382667685ad40c192c4d3d1/platformdirs-4.14.8.tar.gz"
     sha256 "96893d686e84e9e6f358a9ea41a8de544df66dbf2ba6cda250e7dc73acf85b9b"
   end
- 
 
   resource "requests" do
     url "https://files.pythonhosted.org/packages/ac/c3/e2a2b89f2d3e2179abd6d00ebd70bff6273f37fb3e0cc209f48b39d00cbf/requests-2.34.2.tar.gz"
@@ -112,6 +111,7 @@ class Stupid < Formula
 
   def install
     virtualenv_install_with_resources
+
     (bin/"stupid").write <<~EOS
       #!/bin/bash
       export STUPID_HOMEBREW=1
