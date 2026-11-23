@@ -114,6 +114,7 @@ class Stupid < Formula
     virtualenv_install_with_resources
     (bin/"stupid").write <<~EOS
       #!/bin/bash
+      export STUPID_HOMEBREW=1
       exec "#{libexec}/bin/python" -m main "$@"
     EOS
     (bin/"stupid").chmod 0755
