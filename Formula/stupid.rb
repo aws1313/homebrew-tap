@@ -114,9 +114,9 @@ class Stupid < Formula
     virtualenv_install_with_resources
     (bin/"stupid").write <<~EOS
       #!/bin/bash
-      export PYTHONPATH="#{libexec}/lib/python3.14/site-packages/src${PYTHONPATH:+:$PYTHONPATH}"
       exec "#{libexec}/bin/python" -m main "$@"
     EOS
+    (bin/"stupid").chmod 0755
   end
 
   test do
